@@ -6,10 +6,24 @@
  * Time: 14:02
  */
 
-namespace Td;
+namespace td;
 
+
+use Symfony\Component\DependencyInjection\Container;
+use td\Chauffeur;
 
 class Voiture
 {
+    public function __construct($chauffeur)
+    {
+        $this->chauffeur = $chauffeur;
 
+        echo "Voiture disponible<br>";
+    }
+
+    public function demarre()
+    {
+       $this->chauffeur->getName();
+        echo "voiture start<br>";
+    }
 }
